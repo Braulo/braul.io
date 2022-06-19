@@ -5,7 +5,6 @@ import { GitRepo } from "../types/GitRepo";
 import getGitRepos from "../utils/git-repos";
 import getLatestCommit from "../utils/latest-commit";
 import useTranslation from "next-translate/useTranslation";
-import Link from "next/link";
 
 const Home = ({
   repos,
