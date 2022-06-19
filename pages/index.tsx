@@ -4,6 +4,8 @@ import GitHubLogo from "../svg/github";
 import { GitRepo } from "../types/GitRepo";
 import getGitRepos from "../utils/git-repos";
 import getLatestCommit from "../utils/latest-commit";
+import useTranslation from "next-translate/useTranslation";
+import Link from "next/link";
 
 const Home = ({
   repos,
@@ -12,26 +14,22 @@ const Home = ({
   repos: GitRepo[];
   latestCommit: { sha: string };
 }) => {
+  const { t } = useTranslation("common");
   return (
     <>
       <BrauloHeader></BrauloHeader>
       <div className="h-auto">
         <div className="flex">
           <div className="p-4 text-xl">😉</div>
-          <h1 className="p-4 text-base w-full md:w-1/3 sm:w-1/3">
-            Hello, my name is Paul. Currently I am doing my B.Sc in computer
-            science. After I finished my A-levels(German Abitur), I spent 3
-            years training to become an IT specialist in application
-            development. I am actively programming since I was 15 years old.
-            Currently I'm especially interested in topics like blockchain,
-            decentralization and web3.
-          </h1>
+          <h1 className="p-4 text-base w-full md:w-1/2 sm:w-1/2">{t("me")}</h1>
         </div>
         <div className="flex">
           <div className="p-4 text-xl">😎</div>
           <div className="p-4 text-base w-2/3">
             <ul>
-              <li className="text-lg font-bold">Programming languages...</li>
+              <li className="text-lg font-bold">
+                {t("programming-languages")}
+              </li>
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>Solidity</li>
@@ -40,7 +38,7 @@ const Home = ({
               <li>HTML</li>
               <li>CSS/SCSS</li>
               <br />
-              <li className="text-lg font-bold">Technologies...</li>
+              <li className="text-lg font-bold">{t("technologies")}</li>
               <li>Angular</li>
               <li>React</li>
               <li>Next.js</li>
@@ -56,7 +54,7 @@ const Home = ({
         <div className="md:flex">
           <div className="p-4 text-xl">🤖</div>
           <div>
-            <h1 className="p-4 text-lg font-bold">Projects...</h1>
+            <h1 className="p-4 text-lg font-bold">{t("projects")}</h1>
             <div className="grid md:grid-cols-2 gap-4 p-4">
               {repos.map((repo) => (
                 <a
@@ -86,7 +84,7 @@ const Home = ({
               "https://github.com/Braulo/braulo.xyz/commit/" + latestCommit.sha
             }
           >
-            <h1 className="">Commit {latestCommit?.sha?.slice(0, 7)}</h1>
+            <h1 className="">commit {latestCommit?.sha?.slice(0, 7)}</h1>
           </a>
         </div>
       </footer>

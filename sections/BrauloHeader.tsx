@@ -38,7 +38,19 @@ const BrauloHeader: NextComponentType = () => {
         <div>
           <h1 className="text-3xl font-bold">Paul Breuer</h1>
         </div>
-        <div>{renderThemeToggle()}</div>
+        <div className="flex">
+          <div className="m-1 cursor-pointer hover:text-[#E32D3D]">
+            <Link href="/" locale="en">
+              <h2>Eng</h2>
+            </Link>
+          </div>
+          <div className="m-1 mr-4 cursor-pointer hover:text-[#E32D3D]">
+            <Link href="/" locale="de">
+              <h2>De</h2>
+            </Link>
+          </div>
+          <div>{renderThemeToggle()}</div>
+        </div>
       </div>
       <div className="p-4 pt-px flex flex-wrap">
         <div className="mr-3 hover:text-[#E32D3D]">
