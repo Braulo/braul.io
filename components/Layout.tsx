@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
-import BraulFooter from "../sections/BraulFooter";
-import BraulHeader from "../sections/BraulHeader";
+import BrauloFooter from "../sections/BrauloFooter";
+import BrauloHeader from "../sections/BrauloHeader";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <BraulHeader></BraulHeader>
+      <BrauloHeader></BrauloHeader>
       <div className="h-screen">{children}</div>
-      <BraulFooter></BraulFooter>
+      <BrauloFooter></BrauloFooter>
     </>
   );
 };

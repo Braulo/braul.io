@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import Button from "../components/Button";
 import Sun from "../svg/sun";
 import Moon from "../svg/moon";
-import styles from "../styles/Header.module.css";
 import Link from "next/link";
 
-const BraulHeader: NextComponentType = () => {
+const BrauloHeader: NextComponentType = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -53,4 +52,4 @@ const BraulHeader: NextComponentType = () => {
   );
 };
 
-export default BraulHeader;
+export default BrauloHeader;

@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider attribute="class">
       <Head>
         <link rel="icon" href="" />
-        <title>Braul</title>
+        <title>Braulo</title>
       </Head>
       <Layout>
         <Component {...pageProps} />

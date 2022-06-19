@@ -1,4 +1,4 @@
-const BraulFooter = () => {
+const BrauloFooter = () => {
   return (
     <div>
       <h1>Commit(Todo commit hash)</h1>
@@ -6,4 +6,4 @@ const BraulFooter = () => {
   );
 };
 
-export default BraulFooter;
+export default BrauloFooter;
