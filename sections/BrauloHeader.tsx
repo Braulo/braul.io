@@ -6,8 +6,8 @@ import Sun from "../svg/sun";
 import Moon from "../svg/moon";
 import Link from "next/link";
 import CopyIcon from "../svg/copyicon";
-import copyToClipboard from "../utils/uitls";
 import publicKey from "../utils/public-key";
+import copy from "copy-to-clipboard";
 
 const BrauloHeader: NextComponentType = () => {
   const [mounted, setMounted] = useState(false);
@@ -63,7 +63,7 @@ const BrauloHeader: NextComponentType = () => {
           <Link href="mailto:breuer.paulo@googlemail.com">Email</Link>
           <div
             className="hover:text-[#E32D3D] cursor-pointer"
-            onClick={() => copyToClipboard("breuer.paulo@googlemail.com")}
+            onClick={() => copy("breuer.paulo@googlemail.com")}
           >
             <CopyIcon></CopyIcon>
           </div>
@@ -72,7 +72,7 @@ const BrauloHeader: NextComponentType = () => {
           <h3>GPG Key</h3>
           <div
             className="hover:text-[#E32D3D] cursor-pointer"
-            onClick={() => copyToClipboard(publicKey())}
+            onClick={() => copy(publicKey())}
           >
             <CopyIcon></CopyIcon>
           </div>
