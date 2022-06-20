@@ -6,13 +6,15 @@ import App from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class">
+    <>
       <Head>
-        <link rel="icon" href="" />
+        <link rel="icon" href="/favicon.ico" />
         <title>Braulo</title>
       </Head>
-      <Component {...pageProps} />
-    </ThemeProvider>
+      <ThemeProvider attribute="class">
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
   );
 }
 
