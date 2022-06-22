@@ -73,6 +73,12 @@ const Home = ({
                 </a>
               ))}
             </div>
+            <div>
+              <h1 className="p-4 text-lg font-bold">{t("closed-projects")}</h1>
+              <div>
+                <h1 className="p-4">TBD</h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -83,7 +89,12 @@ const Home = ({
               "https://github.com/Braulo/braulo.xyz/commit/" + latestCommit.sha
             }
           >
-            <h1 className="">commit {latestCommit?.sha?.slice(0, 7)}</h1>
+            <h1 className="">
+              commit{" "}
+              <span className="text-[#E32D3D]">
+                {latestCommit?.sha?.slice(0, 7)}
+              </span>
+            </h1>
           </a>
         </div>
       </footer>

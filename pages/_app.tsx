@@ -8,6 +8,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta name="description" content="Paul Breuer" />
+        <meta name="keywords" content="Paul, Breuer, JavaScript" />
+        <meta name="author" content="Paul Breuer" />
         <link rel="icon" href="/favicon.ico" />
         <title>Braulo</title>
       </Head>

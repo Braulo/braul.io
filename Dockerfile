@@ -1,15 +1,15 @@
-FROM node:alpine as dependencies
+FROM node:16.15-alpine as dependencies
 WORKDIR /app
 COPY package.json ./
 RUN npm install 
 
-FROM node:alpine as builder
+FROM node:16.15-alpine as builder
 WORKDIR /app
 COPY . .
 COPY --from=dependencies /app/node_modules ./node_modules
 RUN npm run build
 
-FROM node:alpine as runner
+FROM node:16.15-alpine as runner
 WORKDIR /app
 ENV NODE_ENV production
 

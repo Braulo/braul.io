@@ -59,6 +59,11 @@ const BrauloHeader: NextComponentType = () => {
         <div className="mr-3 hover:text-[#E32D3D]">
           <Link href="https://twitter.com/braul1337">Twitter</Link>
         </div>
+        <div className="mr-3 hover:text-[#E32D3D]">
+          <Link href="https://www.linkedin.com/in/paul-breuer-9230741a1/">
+            LinkedIn
+          </Link>
+        </div>
         <div className="mr-3 flex">
           <Link href="mailto:breuer.paulo@googlemail.com">Email</Link>
           <div
@@ -69,7 +74,7 @@ const BrauloHeader: NextComponentType = () => {
           </div>
         </div>
         <div className="flex">
-          <h3>GPG Key</h3>
+          <h3>Public Key</h3>
           <div
             className="hover:text-[#E32D3D] cursor-pointer"
             onClick={() => copy(publicKey())}
