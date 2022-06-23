@@ -5,6 +5,8 @@ import { GitRepo } from "../types/GitRepo";
 import getGitRepos from "../utils/git-repos";
 import getLatestCommit from "../utils/latest-commit";
 import useTranslation from "next-translate/useTranslation";
+import { privateProjects } from "../utils/private-projects";
+import WebsiteIcon from "../svg/website";
 
 const Home = ({
   repos,
@@ -50,33 +52,86 @@ const Home = ({
             </ul>
           </div>
         </div>
-        <div className="md:flex">
+        <div className="flex md:flex">
           <div className="p-4 text-xl">🤖</div>
-          <div>
+          <div className="flex-1 mr-0 md:mr-48">
             <h1 className="p-4 text-lg font-bold">{t("projects")}</h1>
-            <div className="grid md:grid-cols-2 gap-4 p-4">
-              {repos.map((repo) => (
-                <a
-                  key={repo.id}
-                  href={repo.html_url}
-                  className="block p-4 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-colors duration-500"
-                >
-                  <div className="flex justify-between">
-                    <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white break-words">
-                      {repo.name}
-                    </h5>
-                    <GitHubLogo></GitHubLogo>
-                  </div>
-                  <p className="font-normal text-gray-700 dark:text-gray-400 break-words">
-                    {repo.description}
-                  </p>
-                </a>
-              ))}
-            </div>
             <div>
-              <h1 className="p-4 text-lg font-bold">{t("closed-projects")}</h1>
-              <div>
-                <h1 className="p-4">TBD</h1>
+              <div className="grid md:grid-cols-3 gap-4 p-4">
+                {repos.map((repo) => (
+                  <a
+                    key={repo.id}
+                    target="_blank"
+                    href={repo.html_url}
+                    className="block p-4 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-colors duration-500"
+                  >
+                    <div className="flex justify-between">
+                      <h5 className="mb-2 text-lg font-bold tracking-tight text-black-900 dark:text-white break-words">
+                        {repo.name}
+                      </h5>
+                      <GitHubLogo></GitHubLogo>
+                    </div>
+                    <p className="font-normal text-white-700 dark:text-black-400 break-words">
+                      {repo.description}
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex md:flex">
+          <div className="p-4 text-xl">🤫</div>
+          <div>
+            <h1 className="p-4 text-lg font-bold">{t("closed-projects")}</h1>
+            <div className="flex-1 mr-0 md:mr-48">
+              <div className="grid md:grid-cols-3 gap-4 p-4">
+                {privateProjects.map((project) => (
+                  <a
+                    key={project.name}
+                    target="_blank"
+                    href={project.website || ""}
+                    className={
+                      project.website
+                        ? "block p-4 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-colors duration-500"
+                        : "block disabledlink cursor-auto p-4 bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 transition-colors duration-500"
+                    }
+                  >
+                    <div className="flex justify-between">
+                      <h5 className="mb-2 text-lg font-bold tracking-tight text-white-900 dark:text-white break-words">
+                        {project.name}
+                      </h5>
+                      {project.website ? <WebsiteIcon></WebsiteIcon> : ""}
+                    </div>
+                    <br />
+                    <div>
+                      <p className="font-bold text-white-700 dark:text-black-400">
+                        {t("description")}
+                      </p>
+                      <p className="font-normal text-white-700 dark:text-black-400 break-words">
+                        {t(project.description)}
+                      </p>
+                    </div>
+                    <br />
+                    <div>
+                      <p className="font-bold text-white-700 dark:text-black-400">
+                        Status:
+                      </p>
+                      <p className="font-normal text-white-700 dark:text-black-400 break-words">
+                        {t(project.status)}
+                      </p>
+                    </div>
+                    <br />
+                    <div>
+                      <p className="font-bold text-white-700 dark:text-black-400">
+                        Techstack:
+                      </p>
+                      <p className="font-normal text-white-700 dark:text-black-400 break-words">
+                        {project.techstack}
+                      </p>
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
           </div>

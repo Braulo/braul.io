@@ -2,6 +2,17 @@
   "me": "Hello, my name is Paul. Currently I am doing my B.Sc in computer science. After I finished my A-levels(German Abitur), I spent 3 years training to become an IT specialist in application development. I am actively programming since I was 15 years old. Currently I'm especially interested in topics like blockchain, decentralization and web3.",
   "programming-languages": "Programming languages...",
   "technologies": "Technologies...",
-  "projects": "Public Projects...",
-  "closed-projects": "Private Projects..."
+  "projects": "Open source projects...",
+  "closed-projects": "Private projects...",
+  "description": "Description:",
+  "dango-description": "Bounties for social media influencers who can choose a product of their choice and promote it. In other words, an app that makes it easier for influencers to sign advertising contracts with companies.",
+  "dango-status": "In development",
+  "betterchat-description": "Website that is based on Tinder but without pictures. Meet new people based on their personality and not based on their looks.",
+  "betterchat-status": "In development",
+  "br-description": "This was the first mobile game I developed and I'm honestly uncomfortable even mentioning it, but nonetheless the game had about 500 daily active players and about 20k downloads (before the app got taken down by Google), so I'm still proud of it even if the code and the idea weren't the best. With this project I learned a lot about scaling servers and load balancers.",
+  "br-status": "The app got banned from the Google Play Store :(",
+  "stickers-description": "My second mobile app and one of the first sticker apps after Whatsapp introduced the sticker feature. Was #3 on the 'trending' page in the Google Play Store for a while before Google deleted it. Had about 100k downloads after 2 weeks and a 4.5 star rating.",
+  "stickers-status": "The app got banned from the Google Play Store  :(",
+  "tada-description": "I needed a simple and easy to use ToDo app, with as few features as possible, and I couldn't find an app that wasn't overloaded with features, so I developed and released my own. And this is the only mobile app that wasn't deleted by Google, so I'm pretty proud of it.",
+  "tada-status": "Active"
 }

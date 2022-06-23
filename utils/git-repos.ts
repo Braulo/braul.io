@@ -1,5 +1,7 @@
 import { GitRepo } from "../types/GitRepo";
 
+const blocklist = ["jan", "Braulo"];
+
 const getGitRepos = async () => {
   return (
     (await fetch("https://api.github.com/user/repos", {
@@ -8,8 +10,8 @@ const getGitRepos = async () => {
       },
       method: "GET",
     }).then((response) => response.json())) as GitRepo[]
-  ).filter((repo) => {
-    return !repo.name.includes("Braulo");
+  ).filter(({ name }) => {
+    return !blocklist.includes(name);
   });
 };
 

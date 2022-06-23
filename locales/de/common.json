@@ -3,5 +3,16 @@
   "programming-languages": "Programmiersprachen...",
   "technologies": "Technologien...",
   "projects": "Öffentliche Projekte...",
-  "closed-projects": "Private Projekte..."
+  "description": "Beschreibung:",
+  "closed-projects": "Private Projekte...",
+  "dango-description": "Bounties für Social-Media-Influencer, die sich ein Produkt ihrer Wahl aussuchen und dafür werben können. Mit anderen Worten: Eine App, die es Influencern erleichtert, Werbeverträge mit Unternehmen zu schließen.",
+  "dango-status": "In der Entwicklung",
+  "betterchat-description": "Eine Website, die auf Tinder basiert, aber ohne Bilder. Treffe neue Leute auf der Grundlage ihrer Persönlichkeit und nicht auf der Grundlage ihres Aussehens.",
+  "betterchat-status": "In der Entwicklung",
+  "br-description": "Dies war das erste Handyspiel, das ich entwickelt habe, und es ist mir ehrlich gesagt unangenehm, es zu erwähnen, aber nichtsdestotrotz hatte das Spiel ca. 500 täglich aktive Spieler und ca. 20k Downloads (bevor die app von Google gesperrt wurde), also bin ich dennoch stolz darauf auch wenn der Code und die Idee nicht die beste waren. Bei diesem Projekt habe ich viel über die Skalierung von Servern und Load Balancers gelernt.",
+  "br-status": "Die app wurde im Google Play Store gesperrt :(",
+  "stickers-description": "Meine zweite Handy App und einer der ersten Sticker-Apps, nachdem Whatsapp die Sticker-Funktion eingeführt hat. War eine Zeit lang auf Platz 3 der 'Trending'-Seite im Google Play Store, bevor sie von Google gelöscht wurde. Hatte nach 2 Wochen etwa 100k Downloads und eine 4,5-Sterne-Bewertung.",
+  "stickers-status": "Die app wurde im Google Play Store gesperrt :(",
+  "tada-description": "Ich brauchte eine einfache und leicht zu bedienende ToDo-App, mit so wenig Funktionen wie möglich, und ich konnte keine App finden, die nicht mit Funktionen überladen war, also habe ich meine eigene entwickelt und veröffentlicht. Und dies ist die einzige Handy App, die nicht von Google gelöscht wurde, also bin ich ziemlich stolz darauf.",
+  "tada-status": "Aktiv"
 }

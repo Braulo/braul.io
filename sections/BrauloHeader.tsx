@@ -57,7 +57,7 @@ const BrauloHeader: NextComponentType = () => {
           <Link href="https://github.com/braulo">GitHub</Link>
         </div>
         <div className="mr-3 hover:text-[#E32D3D]">
-          <Link href="https://twitter.com/braul1337">Twitter</Link>
+          <Link href="https://twitter.com/braulo1337">Twitter</Link>
         </div>
         <div className="mr-3 hover:text-[#E32D3D]">
           <Link href="https://www.linkedin.com/in/paul-breuer-9230741a1/">
