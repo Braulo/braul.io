@@ -63,7 +63,7 @@ const Home = ({
                     key={repo.id}
                     target="_blank"
                     href={repo.html_url}
-                    className="block p-4 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-colors duration-500"
+                    className="block p-4 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 dark:bg-slate-900 dark:border-gray-700 dark:hover:bg-gray-700 transition-colors duration-500"
                   >
                     <div className="flex justify-between">
                       <h5 className="mb-2 text-lg font-bold tracking-tight text-black-900 dark:text-white break-words">
@@ -93,8 +93,8 @@ const Home = ({
                     href={project.website || ""}
                     className={
                       project.website
-                        ? "block p-4 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition-colors duration-500"
-                        : "block disabledlink cursor-auto p-4 bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 transition-colors duration-500"
+                        ? "block p-4 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 dark:bg-slate-900 dark:border-gray-700 dark:hover:bg-gray-700 transition-colors duration-500"
+                        : "block disabledlink cursor-auto p-4 bg-white rounded-lg border border-gray-200 dark:bg-slate-900 dark:border-gray-700 transition-colors duration-500"
                     }
                   >
                     <div className="flex justify-between">
