@@ -44,7 +44,7 @@ const Home = ({
               <li>C#</li>
               <li>Java</li>
               <li>HTML</li>
-              <li>CSS/SCSS</li>
+              <li>CSS/ SCSS</li>
             </ul>
           </div>
         </div>
@@ -62,6 +62,7 @@ const Home = ({
               <li>ASP.NET</li>
               <li>SQL</li>
               <li>Hardhat/ Truffle</li>
+              <li>Redux/ NGRX</li>
             </ul>
           </div>
         </div>
