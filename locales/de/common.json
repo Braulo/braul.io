@@ -1,5 +1,6 @@
 {
-  "me": "Hallo, mein Name ist Paul. Aktuell mache ich meinen B.Sc in Informatik. Nachdem ich mein Fachabitur beendet habe, habe ich 3 Jahre lang meine Ausbildung zum Fachinformatiker Anwendungsentwicklung abgeschlossen. Ich programmiere aktiv so ziemlich seit meinem 15 Lebensjahr. Aktuell habe ich besonders Interesse an Themen wie Blockchain, Dezentralisierung und Web3.",
+  "me": "Hi, ich bin Paul aka Braulo und ein Full Stack Developer aus Deutschland!",
+  "me2": "Ich programmiere aktiv so ziemlich seit meinem 15-Lebensjahr. Angefangen habe ich mit dem Programmieren von Minecraft Mods und habe dadurch Java gelernt. Durch ein Praktikum beim ITZBund (Informationstechnikzentrum Bund) habe ich mit der Entwicklung von Android Apps angefangen und insgesamt 4 Handy Apps veröffentlicht. Während meiner 3-jährigen Ausbildung zum Fachinformatiker Anwendungsentwicklung bei einem Unternehmen namens ORBIT (ORBIT IT-Solutions) habe ich die Website Entwicklung für mich entdeckt und im Rahmen meiner Ausbildung mehrere Projekte alleine oder auch im Team für Kunden wie bspw. T-Systems durchgeführt. Aktuell mache ich meinen B.Sc. in Informatik an der Hochschule Bonn-Rhein-Sieg.",
   "programming-languages": "Programmiersprachen...",
   "technologies": "Technologien...",
   "projects": "Öffentliche Projekte...",
@@ -9,10 +10,10 @@
   "dango-status": "In der Entwicklung",
   "betterchat-description": "Eine Website, die auf Tinder basiert, aber ohne Bilder. Treffe neue Leute auf der Grundlage ihrer Persönlichkeit und nicht auf der Grundlage ihres Aussehens.",
   "betterchat-status": "In der Entwicklung",
-  "br-description": "Dies war das erste Handyspiel, das ich entwickelt habe, und es ist mir ehrlich gesagt unangenehm, es zu erwähnen, aber nichtsdestotrotz hatte das Spiel ca. 500 täglich aktive Spieler und ca. 20k Downloads (bevor die app von Google gesperrt wurde), also bin ich dennoch stolz darauf auch wenn der Code und die Idee nicht die beste waren. Bei diesem Projekt habe ich viel über die Skalierung von Servern und Load Balancers gelernt.",
+  "br-description": "Dies war das erste Handyspiel, das ich entwickelt habe, und es ist mir ehrlich gesagt unangenehm, es zu erwähnen, aber nichtsdestotrotz hatte das Spiel ca. 500 täglich aktive Spieler und ca. 20k Downloads (bevor die app von Google gesperrt wurde), also bin ich dennoch stolz darauf auch wenn der Code und die Idee nicht die beste waren.",
   "br-status": "Die app wurde im Google Play Store gesperrt :(",
   "stickers-description": "Meine zweite Handy App und einer der ersten Sticker-Apps, nachdem Whatsapp die Sticker-Funktion eingeführt hat. War eine Zeit lang auf Platz 3 der 'Trending'-Seite im Google Play Store, bevor sie von Google gelöscht wurde. Hatte nach 2 Wochen etwa 100k Downloads und eine 4,5-Sterne-Bewertung.",
   "stickers-status": "Die app wurde im Google Play Store gesperrt :(",
-  "tada-description": "Ich brauchte eine einfache und leicht zu bedienende ToDo-App, mit so wenig Funktionen wie möglich, und ich konnte keine App finden, die nicht mit Funktionen überladen war, also habe ich meine eigene entwickelt und veröffentlicht. Und dies ist die einzige Handy App, die nicht von Google gelöscht wurde, also bin ich ziemlich stolz darauf.",
+  "tada-description": "Ich brauchte eine einfache und leicht zu bedienende ToDo-App, mit so wenig Funktionen wie möglich, und ich konnte keine App finden, die nicht mit Funktionen überladen war, also habe ich meine eigene entwickelt und veröffentlicht. Dies ist die einzige Handy App, die nicht von Google gelöscht wurde, also bin ich ziemlich stolz darauf.",
   "tada-status": "Aktiv"
 }

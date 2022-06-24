@@ -1,4 +1,4 @@
-import type { GetStaticProps } from "next";
+import type { GetServerSideProps } from "next";
 import BrauloHeader from "../sections/BrauloHeader";
 import GitHubLogo from "../svg/github";
 import { GitRepo } from "../types/GitRepo";
@@ -22,10 +22,17 @@ const Home = ({
       <div className="h-auto">
         <div className="flex">
           <div className="p-4 text-xl">😉</div>
-          <h1 className="p-4 text-base w-full md:w-1/2 sm:w-1/2">{t("me")}</h1>
+          <div>
+            <h1 className="p-4 font-bold w-full md:w-1/2 sm:w-1/2">
+              {t("me")}
+            </h1>
+            <h1 className="p-4 pt-0 text-base w-full md:w-1/2 sm:w-1/2">
+              {t("me2")}
+            </h1>
+          </div>
         </div>
         <div className="flex">
-          <div className="p-4 text-xl">😎</div>
+          <div className="p-4 text-xl">🤓</div>
           <div className="p-4 text-base w-2/3">
             <ul>
               <li className="text-lg font-bold">
@@ -38,7 +45,13 @@ const Home = ({
               <li>Java</li>
               <li>HTML</li>
               <li>CSS/SCSS</li>
-              <br />
+            </ul>
+          </div>
+        </div>
+        <div className="flex">
+          <div className="p-4 text-xl">🤖</div>
+          <div className="p-4 text-base w-2/3">
+            <ul>
               <li className="text-lg font-bold">{t("technologies")}</li>
               <li>Angular</li>
               <li>React</li>
@@ -53,7 +66,7 @@ const Home = ({
           </div>
         </div>
         <div className="flex md:flex">
-          <div className="p-4 text-xl">🤖</div>
+          <div className="p-4 text-xl">😎</div>
           <div className="flex-1 mr-0 md:mr-48">
             <h1 className="p-4 text-lg font-bold">{t("projects")}</h1>
             <div>
@@ -62,6 +75,7 @@ const Home = ({
                   <a
                     key={repo.id}
                     target="_blank"
+                    rel="noreferrer"
                     href={repo.html_url}
                     className="block p-4 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 dark:bg-slate-900 dark:border-gray-700 dark:hover:bg-gray-700 transition-colors duration-500"
                   >
@@ -90,6 +104,7 @@ const Home = ({
                   <a
                     key={project.name}
                     target="_blank"
+                    rel="noreferrer"
                     href={project.website || ""}
                     className={
                       project.website
@@ -157,7 +172,8 @@ const Home = ({
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+// executes for every request to the server
+export const getServerSideProps: GetServerSideProps = async () => {
   const repos = await getGitRepos();
   const latestCommit = await getLatestCommit();
 

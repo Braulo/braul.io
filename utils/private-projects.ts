@@ -6,7 +6,7 @@ export const privateProjects: PrivateProject[] = [
     description: "dango-description",
     website: null,
     status: "dango-status",
-    techstack: "Angular, Express.js, SQL",
+    techstack: "Angular, Ionic, Express.js, SQL",
   },
   {
     name: "BetterChat",
