@@ -8,11 +8,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <title>Braulo</title>
         <meta name="description" content="Paul Breuer" />
         <meta name="keywords" content="Paul, Breuer, JavaScript" />
         <meta name="author" content="Paul Breuer" />
-        <link rel="icon" href="/favicon.ico" />
-        <title>Braulo</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider attribute="class">
         <Component {...pageProps} />
