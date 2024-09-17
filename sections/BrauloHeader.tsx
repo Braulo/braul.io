@@ -33,26 +33,41 @@ const BrauloHeader: NextComponentType = () => {
   };
 
   return (
-    <>
-      <div className="p-4 flex justify-between">
-        <div>
-          <h1 className="text-3xl font-bold">Paul Breuer</h1>
-        </div>
-        <div className="flex">
-          <div className="m-1 cursor-pointer hover:text-[#E32D3D]">
-            <Link href="/" locale="en">
-              <h2>Eng</h2>
-            </Link>
+    <header className="bg-black h-[6vh]">
+      <div>
+        <nav className="flex justify-center items-center">
+          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul className="flex gap-4 p-4">
+              <li className="hover:text-[#00FF29] hover:underline">
+                <a href="#">Home</a>
+              </li>
+              <li className="hover:text-[#00FF29] hover:underline">
+                <a href="#">History</a>
+              </li>
+              <li className="hover:text-[#00FF29] hover:underline">
+                <a href="#">Skills</a>
+              </li>
+              <li className="hover:text-[#00FF29] hover:underline">
+                <a href="#">Contact</a>
+              </li>
+            </ul>
           </div>
-          <div className="m-1 mr-4 cursor-pointer hover:text-[#E32D3D]">
-            <Link href="/" locale="de">
-              <h2>De</h2>
-            </Link>
+          <div className="flex items-center gap-4">
+            <div className="cursor-pointer hover:text-[#00FF29]">
+              <Link href="/" locale="en">
+                Eng
+              </Link>
+            </div>
+            <div className="cursor-pointer hover:text-[#00FF29]">
+              <Link href="/" locale="de">
+                De
+              </Link>
+            </div>
+            <div>{renderThemeToggle()}</div>
           </div>
-          <div>{renderThemeToggle()}</div>
-        </div>
+        </nav>
       </div>
-      <div className="p-4 pt-px flex flex-wrap">
+      {/* <div className="p-4 pt-px flex flex-wrap">
         <div className="mr-3 hover:text-[#E32D3D]">
           <Link href="https://github.com/braulo">GitHub</Link>
         </div>
@@ -60,9 +75,7 @@ const BrauloHeader: NextComponentType = () => {
           <Link href="https://twitter.com/braulo1337">Twitter</Link>
         </div>
         <div className="mr-3 hover:text-[#E32D3D]">
-          <Link href="https://www.linkedin.com/in/paul-breuer-9230741a1/">
-            LinkedIn
-          </Link>
+          <Link href="https://www.linkedin.com/in/paul-breuer-9230741a1/">LinkedIn</Link>
         </div>
         <div className="mr-3 flex">
           <Link href="mailto:breuer.paulo@googlemail.com">Email</Link>
@@ -75,15 +88,12 @@ const BrauloHeader: NextComponentType = () => {
         </div>
         <div className="flex">
           <h3>Public Key</h3>
-          <div
-            className="hover:text-[#E32D3D] cursor-pointer"
-            onClick={() => copy(publicKey())}
-          >
+          <div className="hover:text-[#E32D3D] cursor-pointer" onClick={() => copy(publicKey())}>
             <CopyIcon></CopyIcon>
           </div>
         </div>
-      </div>
-    </>
+      </div> */}
+    </header>
   );
 };
 

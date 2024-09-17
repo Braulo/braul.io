@@ -1,6 +1,4 @@
-import { PrivateProject } from "../types/PrivateProject";
-
-export const privateProjects: PrivateProject[] = [
+export const privateProjects: any[] = [
   {
     name: "Dango",
     description: "dango-description",
@@ -18,24 +16,21 @@ export const privateProjects: PrivateProject[] = [
   {
     name: "Battle Royale Chest Opener",
     description: "br-description",
-    website:
-      "https://apkpure.com/battle-royale-chest-opener/com.cetapp.opener.battleroyal.chest",
+    website: "https://apkpure.com/battle-royale-chest-opener/com.cetapp.opener.battleroyal.chest",
     status: "br-status",
     techstack: "Java, Firebase, SQL",
   },
   {
     name: "Battle Royale Stickers for Whatsapp",
     description: "stickers-description",
-    website:
-      "https://apkpure.com/battle-royale-stickers/com.cetapp.sticker.battleroyale",
+    website: "https://apkpure.com/battle-royale-stickers/com.cetapp.sticker.battleroyale",
     status: "stickers-status",
     techstack: "Java, Firebase",
   },
   {
     name: "TaDa Daily Tasks",
     description: "tada-description",
-    website:
-      "https://play.google.com/store/apps/details?id=com.cetaplays.cetanet.tadaapp",
+    website: "https://play.google.com/store/apps/details?id=com.cetaplays.cetanet.tadaapp",
     status: "tada-status",
     techstack: "Java, Firebase, SQL",
   },
