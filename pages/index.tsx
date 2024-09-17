@@ -11,7 +11,7 @@ const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
       <BrauloHeader></BrauloHeader>
       <main className="h-[94vh]">
         <div className="w-[40rem] m-auto">
-          <div className="flex flex-col justify-around h-[90vh]">
+          <div className="flex flex-col justify-around h-[94vh]">
             <div className="">
               <h1 className="text-2xl font-bold">Hi, im Paul </h1>
               <h1 className="text-2xl">a Fullstack Developer</h1>
@@ -35,7 +35,7 @@ const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
         <div className="p-4">
           <a href={"https://github.com/Braulo/braulo.xyz/commit/" + latestCommit.sha}>
             <h1 className="">
-              commit <span className="text-[#E32D3D]">{latestCommit?.sha?.slice(0, 7)}</span>
+              commit <span className="text-[#00FF29]">{latestCommit?.sha?.slice(0, 7)}</span>
             </h1>
           </a>
         </div>
