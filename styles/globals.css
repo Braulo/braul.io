@@ -25,3 +25,40 @@ a {
 .disabledlink {
   pointer-events: none;
 }
+
+.navbar {
+  position: relative;
+}
+
+.navbar .toggle {
+  left: 10px;
+  top: 20px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.menu-nav {
+  list-style: none;
+  position: absolute;
+  background: #000;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  z-index: 9;
+  font-size: 18px;
+  transform: translateX(-100px);
+  transition: transform ease-in-out 0.2s;
+  transition: width ease 0.2s;
+}
+
+.menu-nav.show-menu {
+  width: 20rem;
+  transform: translateX(0px);
+}
+
+.menu-nav li a,
+.menu-nav li span {
+  display: block;
+  padding: 1rem;
+}

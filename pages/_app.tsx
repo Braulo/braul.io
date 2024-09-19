@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="author" content="Paul Breuer" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
-      <ThemeProvider attribute="class">
+      <ThemeProvider attribute="className">
         <Component {...pageProps} />
       </ThemeProvider>
     </>
