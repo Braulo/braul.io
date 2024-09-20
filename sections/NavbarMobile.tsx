@@ -32,7 +32,7 @@ const NavbarMobile = () => {
     <>
       <nav
         ref={ref}
-        className="navbar text-white md:hidden fixed top-0 w-full h-[5vh] flex p-8 bg-black gap-3 justify-between items-center"
+        className="navbar text-white md:hidden top-0 w-full h-[5vh] flex p-8 bg-black gap-3 justify-between items-center"
       >
         <div className="toggle" onClick={() => setNavbarOpen((prev) => !prev)}>
           {navbarOpen ? (

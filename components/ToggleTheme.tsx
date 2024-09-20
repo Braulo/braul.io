@@ -35,8 +35,8 @@ const ToggleTheme = () => {
           </Link>
         </div>
         <div className="cursor-pointer hover:text-[#00FF29]">
-          <Link href="/" locale="de">
-            De
+          <Link href="/" locale="kr">
+            KR
           </Link>
         </div>
         <div>{renderThemeToggle()}</div>
