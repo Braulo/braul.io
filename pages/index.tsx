@@ -2,7 +2,6 @@ import type { GetServerSideProps } from "next";
 import BrauloHeader from "../sections/BrauloHeader";
 import getLatestCommit from "../utils/latest-commit";
 import useTranslation from "next-translate/useTranslation";
-import { IoIosArrowDown } from "react-icons/io";
 import { skills } from "../utils/skills";
 import CopyIcon from "../svg/copyicon";
 import copy from "copy-to-clipboard";
@@ -14,6 +13,7 @@ import NavbarMobile from "../sections/NavbarMobile";
 import { projects } from "../utils/projects";
 import DialogProjects from "../components/Dialog";
 import { useState } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
   const { t } = useTranslation("common");
@@ -21,7 +21,6 @@ const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
   const [selectedValue, setSelectedValue] = useState("value");
 
   const handleClickOpen = (projectName: string) => {
-    // Check if the dialog for this project has already been opened
     if (!openDialogs[projectName]) {
       setOpenDialogs((prevState) => ({
         ...prevState,
@@ -46,34 +45,32 @@ const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
         <div className="md:w-[50rem] w-[20rem] m-auto flex flex-col gap-24 md:gap-32">
           <div className="flex flex-col justify-around h-[94vh]">
             <div className="flex flex-col sm:gap-6 gap-4 text-left">
-              <div className="flex justify-start items-center gap-4">
+              <div className="flex justify-between items-center gap-4">
                 <div>
-                  <h1 className="sm:text-5xl text-xl font-bold">Hi, I'm Paul </h1>
-                  <h1 className="sm:text-5xl text-xl font-bold">a Fullstack Developer!</h1>
+                  <h1 className="sm:text-5xl text-xl font-bold">{t("meheader")}</h1>
+                  <h1 className="sm:text-5xl text-xl font-bold">{t("meheader2")}</h1>
                 </div>
+                <img
+                  src="/me.jpeg"
+                  alt="not found"
+                  className="rounded-full h-[80px] w-[80px] sm:h-[150px] sm:w-[150px]"
+                />
               </div>
-              <p className="sm:mt-10 mt-5">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, libero iste.
-                Dicta repudiandae magnam cum illo eius amet quisquam modi nemo reiciendis neque nisi
-                voluptatem, esse, debitis magni fuga enim. Quasi autem odit amet delectus.
-                Blanditiis dicta obcaecati repudiandae, cumque distinctio cupiditate aperiam
-                suscipit pariatur alias sed non rerum facere.
-              </p>
-              <p className="">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, libero iste.
-                Dicta repudiandae magnam cum illo eius amet quisquam modi nemo reiciendis neque nisi
-              </p>
-              <button className="self-end inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black  bg-[#00FF29] rounded-lg hover:bg-red  shadow-lg hover:ease-in-out hover:shadow-[#00FF29]/50 transition-all">
-                Download CV
-              </button>
+              <p className="sm:mt-10 mt-5">{t("me2")}</p>
+              <p className="">{t("me3")}</p>
+              <a href="/CV_PAUL.pdf" target="_blank">
+                <button className="self-start inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black  bg-[#00FF29] rounded-lg hover:bg-red  shadow-lg hover:ease-in-out hover:shadow-[#00FF29]/50 transition-all">
+                  {t("downloadcv")}
+                </button>
+              </a>
             </div>
             <span className="self-center">
-              <IoIosArrowDown size={60} />
+              <IoMdArrowDropdown size={70}></IoMdArrowDropdown>
             </span>
           </div>
           <div id="history">
             <div className="w-14 h-1 mb-3 bg-[#00FF29]" />
-            <h1 className="text-2xl font-bold mb-10">History</h1>
+            <h1 className="text-2xl font-bold mb-10">{t("history")}</h1>
             <div className="-my-6">
               <div className="relative pl-8 sm:pl-32 py-6 group">
                 <div className="flex items-center justify-between gap-4">
@@ -83,7 +80,6 @@ const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
                 </div>
                 <div className="text-slate-500">Fullstack Web Developer</div>
               </div>
-
               <div className="relative pl-8 sm:pl-32 py-6 group">
                 <div className="flex items-center justify-between gap-4">
                   <div className="font-caveat font-medium text-2xl mb-1 sm:mb-0">
@@ -98,12 +94,12 @@ const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
           </div>
           <div id="skills">
             <div className="w-14 h-1 mb-3 bg-[#00FF29]" />
-            <h1 className="text-2xl font-bold mb-10">Skills</h1>
+            <h1 className="text-2xl font-bold mb-10">{t("skills")}</h1>
             <div className="flex flex-wrap">
               {skills.map((skill) => (
                 <div
                   key={skill}
-                  className="p-2 m-1 text-white bg-[#1E1E1E] rounded-full hover:bg-[#00FF29] hover:text-black hover:cursor-pointer"
+                  className="p-2 pl-[1rem] pr-[1rem] m-1 text-white bg-[#1E1E1E] rounded-full hover:bg-[#00FF29] hover:text-black hover:cursor-pointer"
                 >
                   #{skill}
                 </div>
@@ -112,24 +108,22 @@ const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
           </div>
           <div id="projects">
             <div className="w-14 h-1 mb-3 bg-[#00FF29]" />
-            <h1 className="text-2xl font-bold">Public Projects</h1>
-            <p className="text text-slate-500 mb-10">contact me for project-related work</p>
+            <h1 className="text-2xl font-bold">{t("projects")}</h1>
+            <p className="text text-slate-500 mb-10">{t("projects-free-time")}</p>
 
             <div className="flex flex-wrap gap-4">
               {projects.map((project) => (
                 <div key={project.name}>
                   <div
-                    className="max-w-sm dark:bg-[#1E1E1E] rounded-lg shadow-xl  shadow-[#00FF29]/10 hover:bg-gradient-to-t from-[#00FF29]/[0.5] hover:cursor-pointer"
+                    className="max-w-sm h-[25rem] dark:bg-[#1E1E1E] rounded-lg shadow-xl  shadow-[#00FF29]/10 hover:bg-gradient-to-t from-[#00FF29]/[0.5] hover:cursor-pointer"
                     onClick={() => handleClickOpen(project.name)}
                   >
                     <img className="rounded-t-lg" src={project.mainImage} alt="not found" />
                     <div className="p-5">
-                      <a href="#">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight">{project.name}</h5>
-                      </a>
-                      <p className="mb-3 font-normal">{project.shortDescription}</p>
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight">{project.name}</h5>
+                      <p className="mb-3 font-normal">{t(project.shortDescription)}</p>
                       <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black  bg-[#00FF29] rounded-lg hover:bg-red">
-                        Read more
+                        {t("read-more")}
                         <DialogProjects
                           selectedValue={selectedValue}
                           open={openDialogs[project.name] || false}
@@ -145,7 +139,7 @@ const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
           </div>
           <div id="contact">
             <div className="w-14 h-1 mb-3 bg-[#00FF29]" />
-            <h1 className="text-2xl font-bold mb-10">Contact</h1>
+            <h1 className="text-2xl font-bold mb-10">{t("contact")}</h1>
             <div>
               <div className="mt-12 flex h-32 rounded-lg justify-around items-center bg-gradient-to-t from-[#00FF29]/[0.2]">
                 <div className="mr-3 flex items-center gap-1">
@@ -170,15 +164,6 @@ const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
                     </Link>
                   </div>
                 </div>
-                {/* <div className="flex">
-                  <h3>Public Key</h3>
-                  <div
-                    className="hover:text-[#00FF29] cursor-pointer"
-                    onClick={() => copy(publicKey())}
-                  >
-                    <CopyIcon></CopyIcon>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>

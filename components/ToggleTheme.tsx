@@ -11,6 +11,11 @@ const ToggleTheme = () => {
 
   useEffect(() => {
     setMounted(true);
+    const currentTheme = theme;
+
+    if (currentTheme === "system") {
+      setTheme("dark");
+    }
   }, []);
   const renderThemeToggle = () => {
     if (!mounted) return null;
@@ -31,7 +36,7 @@ const ToggleTheme = () => {
       <div className="flex items-center gap-4">
         <div className="cursor-pointer hover:text-[#00FF29]">
           <Link href="/" locale="en">
-            Eng
+            ENG
           </Link>
         </div>
         <div className="cursor-pointer hover:text-[#00FF29]">

@@ -5,12 +5,13 @@ import { FiMenu } from "react-icons/fi";
 import Button from "../components/ButtonNavbar";
 import Link from "next/link";
 import ToggleTheme from "../components/ToggleTheme";
+import useTranslation from "next-translate/useTranslation";
 
 const menu = [
-  { name: "History", link: "#history" },
-  { name: "Skills", link: "#skills" },
-  { name: "Projects", link: "#projects" },
-  { name: "Contact", link: "#contact" },
+  { name: "history", link: "#history" },
+  { name: "skills", link: "#skills" },
+  { name: "projects", link: "#projects" },
+  { name: "contact", link: "#contact" },
 ];
 const NavbarMobile = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -23,10 +24,11 @@ const NavbarMobile = () => {
     };
     document.addEventListener("mousedown", handler);
     return () => {
-      // Cleanup the event listener
       document.removeEventListener("mousedown", handler);
     };
   }, [navbarOpen]);
+
+  const { t } = useTranslation("common");
 
   return (
     <>
@@ -50,7 +52,7 @@ const NavbarMobile = () => {
               <li key={item.name}>
                 <Button className="hover:underline hover:text-[#00FF29]">
                   <Link href={"/" + item.link}>
-                    <p className="font-light">{item.name}</p>
+                    <p className="font-light">{t(item.name)}</p>
                   </Link>
                 </Button>
               </li>

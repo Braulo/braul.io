@@ -22,4 +22,9 @@ export const skills = [
   "Hardhat",
   "Truffle",
   "Ethereum",
+  "Typeorm",
+  "NestJS",
+  "Ionic",
+  "React Native",
+  "VIM",
 ];

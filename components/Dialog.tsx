@@ -3,6 +3,7 @@
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 import { Project } from "../utils/projects";
 import { IoCloseOutline } from "react-icons/io5";
+import useTranslation from "next-translate/useTranslation";
 
 export default function DialogProjects({
   onClose,
@@ -15,6 +16,7 @@ export default function DialogProjects({
   open: any;
   project: Project;
 }) {
+  const { t } = useTranslation("common");
   const handleClose = () => {
     onClose(selectedValue);
   };
@@ -53,15 +55,32 @@ export default function DialogProjects({
                   </div>
                   <div>
                     <div className="dark:text-slate-500 text-xs">
-                      <p>Published in {project.published}</p>
-                      <p>Defunct in {project.defunct}</p>
+                      <p>
+                        {t("published")} {project.published}
+                      </p>
+                      {project.defunct ? (
+                        <p>
+                          {t("defunct")} {project.defunct}
+                        </p>
+                      ) : (
+                        <a href={project.link}>{project.link}</a>
+                      )}
+                      {project.link && project.bigImage ? (
+                        <a href={project.link}>{project.link}</a>
+                      ) : (
+                        <></>
+                      )}
                     </div>
                     <div className="flex gap-4 sm:flex-row-reverse flex-col-reverse">
                       <div className="flex-[50%]">
                         <div className="flex flex-wrap justify-center items-center gap-4 mt-4">
                           {project?.otherImages?.map((image) => (
                             <div key={image}>
-                              <img src={image} alt="not found" width={300} height={200} />
+                              {project.bigImage ? (
+                                <img src={image} alt="not found" width={200} height={100} />
+                              ) : (
+                                <img src={image} alt="not found" width={300} height={200} />
+                              )}
                             </div>
                           ))}
                         </div>
@@ -70,37 +89,21 @@ export default function DialogProjects({
                         <div className="flex flex-col gap-2">
                           <div className="flex gap-4 justify-start items-center mt-4">
                             <div className="w-1 h-8 bg-[#00FF29]" />
-                            <h1 className="text-xl">Project Description</h1>
+                            <h1 className="text-xl">{t("project-description")}</h1>
                           </div>
-                          <p className="text-sm dark:text-slate-500">
-                            {project.description}
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum totam at
-                            nobis doloribus accusamus, deleniti hic asperiores error, nostrum
-                            adipisci saepe quaerat suscipit sed quam et officiis qui dicta
-                            repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Suscipit, consectetur voluptatum officiis hic cupiditate ullam aut animi
-                            dolore praesentium, numquam minus molestias vero quod fuga placeat
-                            adipisci pariatur ipsum voluptas? Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Earum totam at nobis doloribus accusamus, deleniti hic
-                            asperiores error, nostrum adipisci saepe quaerat
-                          </p>
+                          <p className="text-sm dark:text-slate-500">{t(project.description)}</p>
                         </div>
                         <div className="flex flex-col gap-2">
                           <div className="flex gap-4 justify-start items-center mt-4">
                             <div className="w-1 h-8 bg-[#00FF29]" />
-                            <h1 className="text-xl">My Role</h1>
+                            <h1 className="text-xl">{t("role")}</h1>
                           </div>
-                          <p className="text-sm dark:text-slate-500">
-                            {project.role}
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum totam at
-                            nobis doloribus accusamus, deleniti hic asperiores error, nostrum
-                            adipisci
-                          </p>
+                          <p className="text-sm dark:text-slate-500">{t(project.role)}</p>
                         </div>
                         <div className="flex flex-col gap-2">
                           <div className="flex gap-4 justify-start items-center mt-4">
                             <div className="w-1 h-8 bg-[#00FF29]" />
-                            <h1 className="text-xl">Techstack</h1>
+                            <h1 className="text-xl">{t("techstack")}</h1>
                           </div>
                           <div className="flex flex-wrap">
                             {project.techstack.map((skill) => (
