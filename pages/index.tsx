@@ -58,7 +58,7 @@ const Home = ({ latestCommit }: { latestCommit: { sha: string } }) => {
               </div>
               <p className="sm:mt-10 mt-5">{t("me2")}</p>
               <p className="">{t("me3")}</p>
-              <a href="/CV_PAUL.pdf" target="_blank">
+              <a href="/CV_PAUL_ENGLISH.pdf" target="_blank">
                 <button className="self-start inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black  bg-[#00FF29] rounded-lg hover:bg-red  shadow-lg hover:ease-in-out hover:shadow-[#00FF29]/50 transition-all">
                   {t("downloadcv")}
                 </button>
